@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Target, ArrowLeftRight, Compass, Search, BookOpen, Terminal, Sparkles, Award, Play, RotateCcw } from 'lucide-react';
+import { Target, ArrowLeftRight, Compass, Search, BookOpen, Terminal, Sparkles, Award, Play, RotateCcw, GraduationCap, School } from 'lucide-react';
 import { GameMode } from './types/game';
 import { TopNav } from './components/TopNav';
 import { HunterGame } from './components/HunterGame';
@@ -117,6 +117,23 @@ export default function App() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#7a1827] leading-tight">
                 فرسان صيغة الأمر
               </h1>
+
+              {/* School and Student Credits Card */}
+              <div className="bg-white/95 backdrop-blur border border-blue-200/90 rounded-2xl p-3 sm:p-3.5 shadow-xs flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs text-slate-700">
+                <div className="flex items-center gap-1.5 font-bold text-[#7a1827]">
+                  <GraduationCap className="w-4 h-4 text-blue-600 shrink-0" />
+                  <span>عمل الطالبات: الجوري الحادي & نادية ولي</span>
+                </div>
+                <span className="text-slate-300 hidden sm:inline">|</span>
+                <div className="font-bold text-blue-800 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-200">
+                  الصف: ٣ علم ١
+                </div>
+                <span className="text-slate-300 hidden sm:inline">|</span>
+                <div className="flex items-center gap-1 text-slate-700 font-semibold">
+                  <School className="w-3.5 h-3.5 text-[#7a1827] shrink-0" />
+                  <span>مدرسة الرفاع الغربي الثانوية للبنات</span>
+                </div>
+              </div>
 
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
                 انطلق في رحلة مشوّقة لاكتشاف أسرار <strong className="text-blue-700 font-bold">فعل الأمر</strong>،
@@ -308,17 +325,29 @@ export default function App() {
           {currentMode === 'analyzer' && <GrammarAnalyzer />}
         </section>
 
-        {/* Subtle Footer Note with Reset Option */}
-        <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 border-t border-slate-200 pt-6 pb-4 gap-3">
-          <span>فرسان صيغة الأمر · منصة تعليمية تفاعلية للغة العربية الفصحى</span>
+        {/* Footer with Student Credits & Reset Option */}
+        <footer className="border-t border-slate-200 bg-white rounded-2xl p-5 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600 text-center md:text-right">
+          <div className="space-y-1">
+            <div className="font-bold text-sm text-[#7a1827] flex items-center justify-center md:justify-start gap-2">
+              <GraduationCap className="w-4 h-4 text-blue-600" />
+              <span>مشروع «فرسان صيغة الأمر» التفاعلي</span>
+            </div>
+            <p>
+              من عمل الطالبات: <strong className="text-slate-900 font-bold">الجوري الحادي</strong> وَ <strong className="text-slate-900 font-bold">نادية ولي</strong> · الصف: <span className="font-bold text-blue-700">٣ علم ١</span>
+            </p>
+            <p className="text-slate-500 font-medium flex items-center justify-center md:justify-start gap-1">
+              <School className="w-3.5 h-3.5 text-[#7a1827]" />
+              <span>مدرسة الرفاع الغربي الثانوية للبنات</span>
+            </p>
+          </div>
           <button
             onClick={resetProgress}
-            className="text-slate-500 hover:text-[#7a1827] flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="text-slate-500 hover:text-[#7a1827] flex items-center gap-1.5 transition-colors cursor-pointer bg-slate-50 hover:bg-slate-100 px-3.5 py-2 rounded-xl border border-slate-200 font-semibold"
           >
-            <RotateCcw className="w-3.5 h-3.5" />
+            <RotateCcw className="w-3.5 h-3.5 text-blue-600" />
             <span>إعادة تعيين النقاط</span>
           </button>
-        </div>
+        </footer>
       </main>
 
       {/* Official Certificate & Awards Modal */}

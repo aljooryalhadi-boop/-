@@ -25,17 +25,26 @@ export const TopNav: React.FC<TopNavProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur text-slate-800 border-b border-slate-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-8">
-        {/* Zone 1: Brand Wordmark (Single text element) */}
-        <button
-          onClick={() => {
-            soundFx.playClick();
-            onSelectMode('hunter');
-          }}
-          className="text-lg md:text-xl font-bold tracking-tight text-[#7a1827] hover:text-[#5e121e] transition-colors whitespace-nowrap shrink-0 flex items-center gap-2 cursor-pointer"
-        >
-          <span>فرسان صيغة الأمر</span>
-          <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 hidden sm:inline">لغة الضاد</span>
-        </button>
+        {/* Zone 1: Brand Wordmark (Single text element) + School Credit Badge */}
+        <div className="flex items-center gap-3 shrink-0">
+          <button
+            onClick={() => {
+              soundFx.playClick();
+              onSelectMode('hunter');
+            }}
+            className="text-lg md:text-xl font-bold tracking-tight text-[#7a1827] hover:text-[#5e121e] transition-colors whitespace-nowrap flex items-center gap-2 cursor-pointer"
+          >
+            <span>فرسان صيغة الأمر</span>
+            <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 hidden sm:inline">لغة الضاد</span>
+          </button>
+
+          <div className="hidden xl:flex items-center gap-1.5 text-[11px] text-slate-500 border-r border-slate-200 pr-3 mr-1">
+            <span className="text-[#7a1827] font-bold">عمل: الجوري الحادي & نادية ولي</span>
+            <span className="text-blue-700 font-semibold">(٣ علم ١)</span>
+            <span>·</span>
+            <span className="text-slate-600">الرفاع الغربي الثانوية للبنات</span>
+          </div>
+        </div>
 
         {/* Zone 2: 4-5 Clean single-line text nav links */}
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">

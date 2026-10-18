@@ -117,7 +117,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
 
           <div>
             <span className="text-xs tracking-widest text-blue-700 font-bold block mb-1">
-              مَمْلَكَةُ اللُّغَةِ العَرَبِيَّةِ · وِسَامُ الإِتْقَانِ
+              مَدْرَسَةُ الرِّفَاعِ الغَرْبِيِّ الثَّانَوِيَّةِ لِلْبَنَات · وِسَامُ الإِتْقَانِ اللُّغَوِيِّ
             </span>
             <h2 className="font-amiri text-3xl md:text-4xl font-black text-[#7a1827]">
               شَهَادَةُ جَدَارَةٍ وَتَفَوُّقٍ فِي صِيغَةِ الأَمْرِ
@@ -148,6 +148,16 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             <div>
               <span className="text-slate-500 block mb-0.5">تاريخ الإنجاز</span>
               <span className="font-semibold text-slate-700">{todayDate}</span>
+            </div>
+          </div>
+
+          {/* Official Endorsement & Student Creators Footer */}
+          <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-600 border-t border-blue-100 pt-3 px-2 gap-2 text-center sm:text-right">
+            <div>
+              <span className="font-bold text-[#7a1827]">من عمل الطالبات:</span> الجوري الحادي وَ نادية ولي <span className="font-bold text-blue-700">(٣ علم ١)</span>
+            </div>
+            <div className="font-semibold text-slate-500">
+              مدرسة الرفاع الغربي الثانوية للبنات
             </div>
           </div>
         </div>
