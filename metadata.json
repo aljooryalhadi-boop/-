@@ -1,0 +1,6 @@
+{
+  "name": "فرسان صيغة الأمر | لعبة لغة الضاد التفاعلية",
+  "description": "لعبة تعليمية تفاعلية وممتعة لتعلم وإتقان صيغة الأمر، علامات بنائه، وتصريفه في اللغة العربية بمستويات شيقة وتحديات ذكية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
